@@ -1,5 +1,7 @@
 import java.lang.reflect.Array;
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
 public class StringManupulation {
 
@@ -12,6 +14,20 @@ public class StringManupulation {
         //String[] fixtag = fixlog.split("\\.^");
         String[] fixtag=fixlog.split(";");
         System.out.println(Arrays.toString(fixtag));
+//map
+        Map<String, String> hashMap
+                = new HashMap<String, String>();
+
+        // Iterating over array of strings
+        for (int i = 0; i < fixtag.length; i++) {
+            String[] fixtemp=fixlog.split("=");
+            System.out.println(Arrays.toString(fixtemp));
+            // And set fix tag and value
+            hashMap.put(fixtemp[0], fixtemp[1]);
+        }
+
+        // Printing HashMap
+        System.out.println("String to hashmap: " + hashMap);
 
     }
 }
