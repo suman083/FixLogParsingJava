@@ -20,7 +20,7 @@ public class StringManupulation {
 
         // Iterating over array of strings
         for (int i = 0; i < fixtag.length; i++) {
-            String[] fixtemp=fixlog.split("=");
+            String[] fixtemp=fixtag[i].split("=");
             System.out.println(Arrays.toString(fixtemp));
             // And set fix tag and value
             hashMap.put(fixtemp[0], fixtemp[1]);
