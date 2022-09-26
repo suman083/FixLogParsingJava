@@ -4,10 +4,11 @@ import java.util.*;
 public class StringManupulation {
 
     public static void main(String[] args) {
+        //Validation_tag validation=new Validation_tag();
         System.out.println("Fixlog parser using array of string ");
         String fixlog="8=FIX.4.3;9=102;35=A;49=BuySide;56=SellSide;34=1;52=20190605-11:37:55.565;98=0;108=30;141=Y;553=Username;554=Password;10=118";
         System.out.println(fixlog);
-        Validation_tag validation=new Validation_tag();
+        //Validation_tag validation=new Validation_tag();
         //Substring
         //String[] fixtag = fixlog.split("\\.^");
         String[] fixtag=fixlog.split(";");
@@ -32,6 +33,13 @@ public class StringManupulation {
 
         for(String key: hashMap.keySet()){
             System.out.println("The Value is: " + hashMap.get(key));
+            try{
+                hashMap.get(key).equals(54);
+
+            }
+            finally {
+                System.out.println("tag not found");
+            }
         }
 
 
